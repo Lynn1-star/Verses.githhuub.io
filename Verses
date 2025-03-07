@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture Verses</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2271df;
+            margin: 20px 0; /* Add some space above and below the title */
+            text-align: center; /* Center the title text */
+            width: 100%; /* Ensure the title spans the full width */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .verse-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .verse-box::before
+         {
+        content: ""; /* Empty content to create a pseudo-element */
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px; /* Set the width of the line */
+        background-color: #4CAF50; /* Choose your color */
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px
+    }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+
+        .verse-box:hover {
+            background-color: #e0e0e0;
+        }
+
+        .verse-text {
+            display: none;
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .verse-box {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .verse-box {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+    <script>
+        function toggleVerse(id) {
+            var verseText = document.getElementById(id);
+            verseText.style.display = (verseText.style.display === "none" || verseText.style.display === "") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="title">Scripture Verses for Every Emotion</div>
+    <div class="container">
+        
+        <div class="verse-box" onclick="toggleVerse('verse1')">
+            <p>😢 abundant   - Rom 8:38-39</p>
+            <p id="verse1" class="verse-text">³⁸For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, ³⁹neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse2')">
+            <p>🥺 afraid     -  Josh1:9</p>
+            <p id="verse2" class="verse-text">⁹Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.” (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse3')">
+            <p>😡 Angry  - James1:19-20</p>
+            <p id="verse3" class="verse-text">¹⁹My dear brothers and sisters, take note of this: Everyone should be quick to listen, slow to speak and slow to become angry, ²⁰because human anger does not produce the righteousness that God desires. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse4')">
+            <p>😖 Anxious  -  John 14:27</p>
+            <p id="verse4" class="verse-text">²⁷Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse5')">
+            <p>😞 ashamed  -  Psalm34:4-5</p>
+            <p id="verse5" class="verse-text">⁴I sought the Lord, and he answered me;he delivered me from all my fears.⁵Those who look to him are radiant;their faces are never covered with shame. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse6')">
+            <p>😮 betrayed   -  John15:18-21</p>
+            <p id="verse6" class="verse-text">¹⁸“If the world hates you, keep in mind that it hated me first. ¹⁹If you belonged to the world, it would love you as its own. As it is, you do not belong to the world, but I have chosen you out of the world. That is why the world hates you. ²⁰Remember what I told you: ‘A servant is not greater than his master.’ If they persecuted me, they will persecute you also. If they obeyed my teaching, they will obey yours also. ²¹They will treat you this way because of my name, for they do not know the one who sent me. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse7')">
+            <p>😠 bitter    -    Eph 4:31-32</p>
+            <p id="verse7" class="verse-text">³¹Get rid of all bitterness, rage and anger, brawling and slander, along with every form of malice. ³²Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse8')">
+            <p>🫤 confused  - John14:26</p>
+            <p id="verse8" class="verse-text">²⁶But the Advocate, the Holy Spirit, whom the Father will send in my name, will teach you all things and will remind you of everything I have said to you. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse9')">
+            <p>🥱 bored   -  Col 3:23-24</p>
+            <p id="verse9" class="verse-text">²³Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, ²⁴since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse10')">
+            <p>😑 Critical - Matt 7:1-5</p>
+            <p id="verse10" class="verse-text">Do not judge, or you too will be judged. For in the same way you judge others, you will be judged. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse11')">
+            <p>😐 Depressed - Psalm 34:17-18</p>
+            <p id="verse11" class="verse-text">The righteous cry out, and the Lord hears them; he delivers them from all their troubles. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse12')">
+            <p>😲 Desperate - Psalm 91:14-16</p>
+            <p id="verse12" class="verse-text">Because he loves me, says the Lord, I will rescue him; I will protect him, for he acknowledges my name. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse13')">
+            <p>🙁 Disappointed - Rom 8:28</p>
+            <p id="verse13" class="verse-text">And we know that in all things God works for the good of those who love him. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse14')">
+            <p>😣 Discouraged - Gal 6:9</p>
+            <p id="verse14" class="verse-text">Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse15')">
+            <p>😨 Embarrassed - 1 John 4:18</p>
+            <p id="verse15" class="verse-text">There is no fear in love. But perfect love drives out fear. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse16')">
+            <p>😴 Exhausted - Matt 11:28-30</p>
+            <p id="verse16" class="verse-text">Come to me, all you who are weary and burdened, and I will give you rest. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse17')">
+            <p>😬 Guilty - Rom 3:23-24</p>
+            <p id="verse17" class="verse-text">For all have sinned and fall short of the glory of God, and all are justified freely by his grace. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse18')">
+            <p>😭 Grieving - Matt 5:4</p>
+            <p id="verse18" class="verse-text">Blessed are those who mourn, for they will be comforted. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse19')">
+            <p>🤕 Hurt - 1 Peter 2:21-23</p>
+            <p id="verse19" class="verse-text">When they hurled their insults at him, he did not retaliate; when he suffered, he made no threats. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse20')">
+            <p>❓ Indecisive - Matt 6:33</p>
+            <p id="verse20" class="verse-text">But seek first his kingdom and his righteousness, and all these things will be given to you as well. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse21')">
+            <p>😪 Insecure    -    Psalm 4:6-9</p>
+            <p id="verse21" class="verse-text">⁶Many, Lord, are asking, “Who will bring us prosperity?”Let the light of your face shine on us.⁷Fill my heart with joy when their grain and new wine abound.⁸In peace I will lie down and sleep,for you alone, Lord,make me dwell in safety. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse22')">
+            <p>🙄irritated   -    Prov 21:23</p>
+            <p id="verse22" class="verse-text">²A person may think their own ways are right,but the Lord weighs the heart. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse23')">
+            <p>👀 Jealous   -   Heb 13:5</p>
+            <p id="verse23" class="verse-text">⁵Keep your lives free from the love of money and be content with what you have, because God has said,“Never will I leave you;never will I forsake you.” (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse24')">
+            <p>😢 Lonely    -   Isaiah 41:10</p>
+            <p id="verse24" class="verse-text">¹⁰So do not fear, for I am with you;do not be dismayed, for I am your God.I will strengthen you and help you;I will uphold you with my righteous right hand. (NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse25')">
+            <p>😞 Miserable   -  John 3:16-17</p>
+            <p id="verse25" class="verse-text">¹⁶For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. ¹⁷For God did not send his Son into the world to condemn the world, but to save the world through him.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse26')">
+            <p>😒 Moody      -  Rom 12:2</p>
+            <p id="verse26" class="verse-text">²Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God’s will is—his good, pleasing and perfect will.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse27')">
+            <p>😱 Scared    -   Psalm 23:1-6</p>
+            <p id="verse27" class="verse-text">¹The Lord is my shepherd, I lack nothing.²He makes me lie down in green pastures,he leads me beside quiet waters,³he refreshes my soul.He guides me along the right paths for his name’s sake.⁴Even though I walk through the darkest valley,I will fear no evil,for you are with me;your rod and your staff,they comfort me.⁵You prepare a table before me in the presence of my enemies.You anoint my head with oil;my cup overflows.⁶Surely your goodness and love will follow me all the days of my life,and I will dwell in the house of the Lord forever.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse28')">
+            <p>😢 Sorry       -  2 Chro 30:9</p>
+            <p id="verse28" class="verse-text">⁹If you return to the Lord, then your fellow Israelites and your children will be shown compassion by their captors and will return to this land, for the Lord your God is gracious and compassionate. He will not turn his face from you if you return to him.”(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse29')">
+            <p>👿Tempted    -  1 Cor 10:13</p>
+            <p id="verse29" class="verse-text">¹³No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse30')">
+            <p>😩 Stressed   -    Psalm 55:22</p>
+            <p id="verse30" class="verse-text">²²Cast your cares on the Lord and he will sustain you;he will never let the righteous be shaken.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse31')">
+            <p>💔Unloved   -  1 john 3:1</p>
+            <p id="verse31" class="verse-text">3 See what great love the Father has lavished on us, that we should be called children of God! And that is what we are! The reason the world does not know us is that it did not know him.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse32')">
+            <p>☹️ upset     -    Eph 4:26-27</p>
+            <p id="verse32" class="verse-text">²⁶“In your anger do not sin”: Do not let the sun go down while you are still angry, ²⁷and do not give the devil a foothold.(NIV)</p>
+        </div>
+        <div class="verse-box" onclick="toggleVerse('verse33')">
+            <p>😖Worried     -   Phil 4:6-7</p>
+            <p id="verse33" class="verse-text">⁶Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. ⁷And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.(NIV)</p>
+        </div>
+
+    </div>
+</body>
+</html>
